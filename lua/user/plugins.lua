@@ -59,8 +59,9 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim"
 
   -- Colorschemes
-  use "ellisonleao/gruvbox.nvim"
   use "sainnhe/gruvbox-material"
+  use "LunarVim/darkplus.nvim"
+
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

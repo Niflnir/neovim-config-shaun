@@ -8,7 +8,7 @@ local options = {
   fileencoding = "utf-8",                  -- the encoding written to a file
   hlsearch = true,                         -- highlight all matches on previous search pattern
   ignorecase = true,                       -- ignore case in search patterns
-  mouse = "",                              -- allow the mouse to be used in neovim
+  mouse = "a",                              -- allow the mouse to be used in neovim
   pumheight = 10,                          -- pop up menu height
   showmode = false,                        -- we don't need to see things like -- INSERT -- anymore
   showtabline = 2,                         -- always show tabs 
@@ -31,7 +31,7 @@ local options = {
   numberwidth = 4,                         -- set number column width to 2 {default 4}
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
   wrap = true,                             -- do not display lines as one long line
-  scrolloff = 8,                           -- is one of my fav
+  scrolloff = 5,                           -- is one of my fav
   sidescrolloff = 8,
 }
 
@@ -41,3 +41,4 @@ vim.opt.shortmess:append "c"
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
+
