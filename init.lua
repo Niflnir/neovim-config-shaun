@@ -18,3 +18,5 @@ require "user.indentLine"
 require "user.alpha"
 require "user.bufferline"
 require "user.luasnip"
+require "user.trouble"
+
