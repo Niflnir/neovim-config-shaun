@@ -1,5 +1,4 @@
 local opts = { noremap = true, silent = true }
-
 local term_opts = { silent = true }
 
 -- Shorten function name
@@ -68,4 +67,7 @@ keymap("v", "p", '"_dP', opts)
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>b", ":Gitsigns blame_line<CR>", opts)
 
+-- search and replace
+keymap("n", "<leader>s", ":%s/", opts)
