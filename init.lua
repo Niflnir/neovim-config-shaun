@@ -19,4 +19,5 @@ require "user.alpha"
 require "user.bufferline"
 require "user.luasnip"
 require "user.trouble"
-
+require "user.lightspeed"
+require "user.lsp_signature"

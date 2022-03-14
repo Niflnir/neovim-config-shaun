@@ -1,0 +1,45 @@
+{
+  "cpmain": {
+    "prefix": "cpmain",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "#include <numeric>",
+      "#define int long long int",
+      "#define forn(n) for(int i=0; i<n; i++)",
+      "#define all(a) a.begin(), a.end()",
+      "using namespace std;",
+      "",
+      "void solve(){",
+      "\tint length, temp;",
+      "\tvector<int> arr;",
+      "\tcin >> length;",
+      "\tforn(length){",
+      "\t\tcin >> temp;",
+      "\t\tarr.push_back(temp);",
+      "\t}",
+      "}",
+      "",
+      "int32_t main(){",
+      "\tint t = 1;",
+      "\tcin >> t;",
+      "\twhile(t--) solve();",
+      "}"
+    ],
+    "description": "cp main"
+  },
+  "binaryExpo": {
+    "prefix": "binaryexpo",
+    "body": [
+      "int power(int a, int b){",
+      "\tint res = 1;",
+      "\twhile (b) {",
+      "\t\tif(b & 1) res *= a;",
+      "\t\ta *= a",
+      "\t\tb/=2;",
+      "\t}",
+      "\t return res;",
+      "}"
+    ],
+    "description": "binary exponentiation"
+  }
+}

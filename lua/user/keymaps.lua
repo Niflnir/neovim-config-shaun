@@ -71,3 +71,12 @@ keymap("n", "<leader>b", ":Gitsigns blame_line<CR>", opts)
 
 -- search and replace
 keymap("n", "<leader>s", ":%s/", opts)
+-- C++ shortcuts 
+vim.cmd("autocmd  FileType cpp lua CppShortcuts()")
+function CppShortcuts()
+	vim.opt.mp = "g++ -O2 -Wall --std=c++17 -Wno-unused-result %:r.cpp -o %:r"
+	keymap("n", "<F2>", "<cmd>vs %:r.in<CR>", opts)
+	keymap("n", "<F3>", "<cmd>!time ./%:r < %:r.in <CR>", opts)
+	keymap("n", "<F4>", "<cmd>w<CR><cmd>make<CR>", opts)
+	keymap("n", "<F5>", "<cmd>w<CR><cmd>make<CR><cmd>!time ./%:r < %:r.in<CR>", opts)
+end
