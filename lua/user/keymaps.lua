@@ -39,6 +39,8 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
+-- Press kh fast to enter
+-- keymap("i", "kh", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -46,9 +48,16 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+keymap("v", "<A-k>", ":m .+1<CR>==", opts)
+keymap("v", "<A-j>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
+
+-- Colemak jkhl
+-- keymap("n","n","<down>",opts)
+-- keymap("n","e","<up>",opts)
+--
+-- keymap("v","n","<down>",opts)
+-- keymap("v","e","<up>",opts)
 
 -- Visual Block --
 -- Move text up and down
@@ -65,13 +74,18 @@ keymap("v", "p", '"_dP', opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap(
+	"n",
+	"<leader>f",
+	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+	opts
+)
 keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>b", ":Gitsigns blame_line<CR>", opts)
 
 -- search and replace
 keymap("n", "<leader>s", ":%s/", opts)
--- C++ shortcuts 
+-- C++ shortcuts
 vim.cmd("autocmd  FileType cpp lua CppShortcuts()")
 function CppShortcuts()
 	vim.opt.mp = "g++ -O2 -Wall --std=c++17 -Wno-unused-result %:r.cpp -o %:r"
